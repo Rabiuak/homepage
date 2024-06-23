@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DateTime</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+			background-image: url("IMG1.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-attachment: fixed;
+
+		}
+		div{
+			font-weight: 800;
+			width: 65%;
+			margin: auto;
+			background-color: hsla(0, 100%, 30%, 0.3);
+			opacity: 80%;
+		    margin-top: 24%;
+		    color: #FFF;
+		    border-radius: 7%;
+		}
+		#demo{
+			margin-top: 0;
+			font-size: 5.5rem;
+		}
+		#date{
+			font-size: 2rem;
+			margin: -7% auto -1%;
+		}
+		#gr{
+			font-size: 2.5rem;
+			letter-spacing: 2px;
+			margin-top: ;
+		}
+		#fc{
+			font-size: 1.5rem;
+		}
+		hr{
+			width: 35%;
+			height: 2px;
+			border: dashed;
+			border-block: none;
+			background: #fff;
+			opacity: 50%;
+		}
+	</style>
+</head>
+<body>
+	
+	<div>
+		<h1 id="demo">Hello</h1>
+	    <h1 id="date"></h1>
+	    <h2 id="gr" ><span id="greet"></span>,&nbsp;<span>Rabiuak.</span></h2>
+	    <h3 id="fc">What is your main focus for Today?</h3>
+	    <hr>
+	</div>
+
+
+	<script type="text/javascript">
+		const date = new Date();
+		var h = date.getHours();
+		var m = date.getMinutes();
+		var g;
+
+		if (h < 12) {
+			g = "Good Morning";
+		}else if(h < 18 ){
+			g = "Good Afternoon";
+		}
+		else{
+			g = "Good Night";
+		}
+
+		document.getElementById("demo").innerHTML = h+" : "+m;
+		document.getElementById("date").innerHTML = date.toDateString();
+		document.getElementById("greet").innerHTML = g;
+	</script>
+
+</body>
+</html>
